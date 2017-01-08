@@ -5,7 +5,7 @@ import java.util.Observable;
 /**
  * Created by moheetB on 1/8/17.
  */
-public class Category extends Observable {
+final public class Category extends Observable {
 
     String categoryId;
     String name;

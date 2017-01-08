@@ -5,7 +5,7 @@ import java.util.Observable;
 /**
  * Created by moheetB on 1/8/17.
  */
-public class Channel extends Observable {
+final public class Channel extends Observable {
 
     String channelId;
     String name;

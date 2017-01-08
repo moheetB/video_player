@@ -5,7 +5,7 @@ import java.util.Observable;
 /**
  * Created by moheetB on 1/8/17.
  */
-public class Video extends Observable {
+final public class Video extends Observable {
 
     String videoId;
     String name;
