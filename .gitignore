@@ -1,3 +1,6 @@
 .DS_Store
 */.DS_Store
 *.iml
+./video_player_app/lib/*
+./video_player_app/.idea/
+./video_player_app/.idea/*
