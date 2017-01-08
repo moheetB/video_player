@@ -1,9 +1,11 @@
 package com.video.player.model;
 
+import java.util.Observable;
+
 /**
  * Created by moheetB on 1/8/17.
  */
-public class Channel {
+public class Channel extends Observable {
 
     String channelId;
     String name;

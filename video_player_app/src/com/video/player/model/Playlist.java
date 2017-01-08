@@ -1,11 +1,12 @@
 package com.video.player.model;
 
 import java.util.Date;
+import java.util.Observable;
 
 /**
  * Created by moheetB on 1/8/17.
  */
-public class Playlist {
+public class Playlist extends Observable {
 
     String playlistId;
     String name;
