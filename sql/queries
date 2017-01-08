@@ -1,0 +1,13 @@
+4. select channel.name as channel, video.name as video from video
+   left join channel
+   on video.channel_id = channel.channel_id;
+   
+5. select name as Channel, video_count as Count from channel where video_count = (select max(video_count) from channel)
+   union all
+   select name, video_count from channel where video_count = (select min(video_count) from channel);
+   
+6. select p.name as Playlist, v.name as Video from playlist as p
+   inner join playlist_video as pv
+   on p.playlist_id = pv.playlist_id
+   inner join video as v
+   in v.video_id = pv.video_id
