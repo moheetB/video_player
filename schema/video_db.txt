@@ -8,6 +8,7 @@ video
  - name
  - upload_time
  - channel_id
+ - view_count
  
 category
  - category_id (PK)
