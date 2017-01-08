@@ -1,6 +1,7 @@
 channel
  - channel_id (PK)
  - name
+ - count
  
 video
  - video_id (PK)
@@ -15,16 +16,16 @@ category
 playlist
  - playlist_id (PK)
  - name
- - Create_time
+ - create_time
  
 channel_category
  - channel_id
- - Category_id
+ - category_id
  
-Video_category
+video_category
  - video_id
  - category_id
 
-Playlist_Video
+playlist_Video
  - playlist_id
  - video_id
