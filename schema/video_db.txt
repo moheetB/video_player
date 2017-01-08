@@ -1,0 +1,30 @@
+channel
+ - channel_id (PK)
+ - name
+ 
+video
+ - video_id (PK)
+ - name
+ - upload_time
+ - channel_id
+ 
+category
+ - category_id (PK)
+ - name
+
+playlist
+ - playlist_id (PK)
+ - name
+ - Create_time
+ 
+channel_category
+ - channel_id
+ - Category_id
+ 
+Video_category
+ - video_id
+ - category_id
+
+Playlist_Video
+ - playlist_id
+ - video_id
