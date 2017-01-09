@@ -2,6 +2,7 @@ package com.video.player.model;
 
 import java.util.Date;
 import java.util.Observable;
+import java.util.List;
 
 /**
  * Created by moheetB on 1/8/17.
@@ -40,5 +41,12 @@ final public class Playlist extends Observable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public void updatePlaylist(Playlist playlistID) {
+
+    }
+
+    public void addSongs(Playlist playlist, List<String> songList) {
     }
 }

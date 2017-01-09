@@ -1,6 +1,7 @@
 package com.video.player.controller;
 
 import com.video.player.auxiliary.GUID;
+import com.video.player.exception.ConnectionException;
 import com.video.player.exception.CreationException;
 import com.video.player.exception.UpdateException;
 import com.video.player.model.Channel;
@@ -26,7 +27,7 @@ final public class ChannelController {
         this.channel = channel;
     }
 
-    public Channel createChannel(final String channelName) throws CreationException {
+    public Channel createChannel(final String channelName) throws CreationException, ConnectionException {
 
         final String channelId = GUID_CREATER.getGUID();
         try {
@@ -36,19 +37,20 @@ final public class ChannelController {
 
             // the following exception message should be extracted as a String Contant.
             throw new CreationException(iAException.getMessage());
+        } catch (ConnectionException cException) {
+            throw cException;
         } finally {
             // free resources
         }
     }
 
-    public void updateChannel(final Channel channel) throws UpdateException {
+    public void updateChannel(final Channel channel) throws UpdateException{
+        try{
+            channel.updateChannel(channel);
+        }catch (IllegalArgumentException iAException){
+            throw new UpdateException(iAException.getMessage());
+        } finally {
 
-        // write similar to create above
-
-        /*
-
-        1. Observe that updateChannel will only take channelId, because the channels already exists
-         
-         */
+        }
     }
 }

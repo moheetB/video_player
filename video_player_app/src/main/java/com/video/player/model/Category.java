@@ -30,4 +30,12 @@ final public class Category extends Observable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void updateCategory(final Category category){
+
+    }
+
+    public void deleteCategory(final Category category){
+
+    }
 }
