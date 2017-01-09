@@ -48,7 +48,7 @@ final public class ChannelController {
         try{
             channel.updateChannel(channel);
         }catch (IllegalArgumentException iAException){
-            throw new UpdateException(iAException.getMessage());
+            //throw new UpdateException(iAException.getMessage());
         } finally {
 
         }

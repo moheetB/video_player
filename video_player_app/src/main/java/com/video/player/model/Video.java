@@ -20,7 +20,7 @@ final public class Video extends Observable {
             String upload_time,
             String channel_id,
             long view_count,
-            String tags) {
+            String s, String tags) {
 
         this.videoId = videoId;
         this.name = name;

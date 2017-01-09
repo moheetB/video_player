@@ -2,6 +2,7 @@ package com.video.player.controller;
 
 import com.video.player.auxiliary.GUID;
 import com.video.player.exception.CreationException;
+import com.video.player.exception.DeleteException;
 import com.video.player.exception.UpdateException;
 import com.video.player.model.Playlist;
 
@@ -33,12 +34,12 @@ final public class PlaylistController {
         this.playlist = playlist;
     }
 
-    public Playlist createPlaylist(final String playlistName) throws CreationException{
+    public Playlist createPlaylist(final String playlistName, final String description) throws CreationException{
         final String playlistID = GUID_CREATOR.getGUID();
         final Date date = new Date();
 
         try{
-            final Playlist playlist = new Playlist(playlistID, playlistName, date);
+            final Playlist playlist = new Playlist(playlistID, playlistName, date, description);
             return playlist;
         } catch (IllegalArgumentException iAException){
             throw new CreationException(iAException.getMessage());
@@ -50,6 +51,8 @@ final public class PlaylistController {
             playlist.updatePlaylist(playlist);
         } catch (IllegalArgumentException iAException){
             throw new UpdateException(iAException.getMessage());
+        } finally {
+            //To do Something
         }
     }
 
@@ -60,6 +63,18 @@ final public class PlaylistController {
             playlist.addSongs(playlist, songList);
         } catch (IllegalArgumentException iAException){
             throw new UpdateException(iAException.getMessage());
+        } finally{
+            //To do Something
+        }
+    }
+
+    public void deletePlaylist(final Playlist playlist) throws DeleteException{
+        try{
+            playlist.deletePlaylist(playlist);
+        } catch (IllegalArgumentException iAException){
+//            throw new DeleteException(iAException.getMessage());
+        } finally {
+            //To do something
         }
     }
 }
