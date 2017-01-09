@@ -50,7 +50,5 @@ final public class ChannelController {
         1. Observe that updateChannel will only take channelId, because the channels already exists
          
          */
-
     }
-
 }
