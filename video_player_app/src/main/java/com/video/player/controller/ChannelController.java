@@ -41,16 +41,14 @@ final public class ChannelController {
         }
     }
 
-    public void updateChannel(final Channel channel) throws UpdateException {
+    public void updateChannel(final Channel channel) throws UpdateException{
+        try{
+            channel.updateChannel(channel);
+        }catch (IllegalArgumentException iAException){
+            throw new UpdateException(iAException.getMessage());
+        } finally {
 
-        // write similar to create above
-
-        /*
-
-        1. Observe that updateChannel will only take channelId, because the channels already exists
-         
-         */
-
+        }
     }
 
 }

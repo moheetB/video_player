@@ -41,4 +41,11 @@ final public class Playlist extends Observable {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
+
+    public void updatePlaylist(Playlist playlistID) {
+
+    }
+
+    public void addSongs(Playlist playlist, List<String> songList) {
+    }
 }

@@ -60,4 +60,8 @@ final public class Video extends Observable {
     public void setView_count(long view_count) {
         this.view_count = view_count;
     }
+
+    public void updateVideo(Video video) {
+
+    }
 }
