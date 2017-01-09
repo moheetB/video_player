@@ -1,35 +1,40 @@
 package com.video.player.model;
 
+import com.google.common.base.Preconditions;
+
 import java.util.Observable;
 
 /**
- * Created by moheetB on 1/8/17.
+ * Created by Gaurav on 1/8/2017.
  */
-final public class Category extends Observable {
-
-    String categoryId;
-    String name;
-
-    public Category(String categoryId, String name) {
-        this.categoryId = categoryId;
-        this.name = name;
+final public class Category extends Observable{
+    public String getCategoryID() {
+        return categoryID;
     }
 
-    public String getCategoryId() {
-        return categoryId;
+    public void setCategoryID(String categoryID) {
+        this.categoryID = categoryID;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
+
+    String categoryID;
+    String name;
+
+
+    public Category(String categoryID, String name) {
+        Preconditions.checkNotNull(categoryID, "Category ID cannot be null");
+        Preconditions.checkNotNull(name, "Category Name cannot be null");
+        this.categoryID = categoryID;
+        this.name = name;
+    }
+
 
     public void updateCategory(final Category category){
 
@@ -38,4 +43,5 @@ final public class Category extends Observable {
     public void deleteCategory(final Category category){
 
     }
+
 }

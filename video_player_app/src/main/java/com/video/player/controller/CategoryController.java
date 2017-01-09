@@ -2,6 +2,7 @@ package com.video.player.controller;
 
 import com.video.player.auxiliary.GUID;
 import com.video.player.exception.CreationException;
+import com.video.player.exception.DeleteException;
 import com.video.player.exception.UpdateException;
 import com.video.player.model.Category;
 
@@ -35,7 +36,7 @@ final public class CategoryController {
         } catch (IllegalArgumentException iAException){
             throw new CreationException(iAException.getMessage());
         } finally{
-
+            //To do Something
         }
     }
 
@@ -45,6 +46,18 @@ final public class CategoryController {
             category.updateCategory(category);
         } catch (IllegalArgumentException iAException){
             throw new UpdateException(iAException.getMessage());
+        } finally {
+            //To do Something
+        }
+    }
+
+    public void deleteCategory(final Category category) throws DeleteException{
+        try{
+            category.deleteCategory(category);
+        } catch (IllegalArgumentException iAException){
+            throw new DeleteException(iAException.getMessage());
+        } finally{
+            //To do Something
         }
     }
 }
