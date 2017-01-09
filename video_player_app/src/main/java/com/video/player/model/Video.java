@@ -64,4 +64,8 @@ final public class Video extends Observable {
     public void updateVideo(Video video) {
 
     }
+
+    public void deleteVideo(Video video){
+
+    }
 }

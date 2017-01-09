@@ -36,4 +36,12 @@ final public class Channel extends Observable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void updateChannel(final Channel channel){
+
+    }
+
+    public void deleteChannel(final Channel channel){
+
+    }
 }

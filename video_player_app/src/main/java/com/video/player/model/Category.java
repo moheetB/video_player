@@ -31,7 +31,11 @@ final public class Category extends Observable {
         this.name = name;
     }
 
-    public void updateCategory(final Category categoryID){
+    public void updateCategory(final Category category){
+
+    }
+
+    public void deleteCategory(final Category category){
 
     }
 }
